@@ -1,5 +1,4 @@
 FROM openjdk:7-jre
-#FROM farhad/oraclejdk:7
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
@@ -19,7 +18,7 @@ ENV LD_LIBRARY_PATH ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$TOMCAT_NATIVE_LIBDIR
 ENV OPENSSL_VERSION 1.1.0f-3+deb9u1
 RUN set -ex; \
         if ! grep -qE "stretch|stable" /etc/apt/sources.list; then \
-# only add stretch if we're not already building from within stretch
+# only add stretch if we're not already building from within stretch - added stable because stretch is not relevent anymore
                 { \
                         echo 'deb http://deb.debian.org/debian stretch main'; \
                         echo 'deb http://security.debian.org stretch/updates main'; \
