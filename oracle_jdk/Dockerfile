@@ -4,7 +4,7 @@ ENV JAVA_VERSION_MAJOR=7 \
     JAVA_VERSION_MINOR=80 \
     JAVA_VERSION_BUILD=15 \
     JAVA_PACKAGE=jdk \
-    JAVA_HOME=/opt/jdk1.7.0_80 \
+    JAVA_HOME=/opt/jdk1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR} \
     JVM_OPTS="" \
     LANG=C.UTF-8
 COPY ./jdk-7u80-linux-x64.tar.gz /jdk-7u80-linux-x64.tar.gz
